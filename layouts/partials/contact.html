@@ -1,10 +1,11 @@
 {{ if .Site.Data.homepage.contact.enable }}
 {{ with .Site.Data.homepage.contact }}
-<section id="contact-us" {{ if .overlay }} class="overlay" {{ end }}
-  style="background-image: url('{{ .bgImage | absURL }}');">	
-  <div class="container">
+<section id="contact-us" {{ if .overlay }} class="overlay" {{ end }}>
+<picture>
+	<img class="img-responsive" src="{{ .bgImage | absURL }}">
+  <div class="container" >
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" >
 				<div class="block">
 					<h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">{{ .title | markdownify }}</h1>
 					<h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">{{ .subtitle | markdownify }}</h3>
@@ -25,6 +26,7 @@
 			</div><!-- .col-md-12 close -->
 		</div><!-- .row close -->
 	</div><!-- .container close -->
+</picture>
 </section><!-- #contact-us close -->
 {{end}}
 {{end}}
