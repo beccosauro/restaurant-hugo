@@ -1,6 +1,7 @@
 {{ if .Site.Data.homepage.contact.enable }}
 {{ with .Site.Data.homepage.contact }}
-<section id="contact-us" {{ if .overlay }} class="overlay" {{ end }}   style="background-image: url('{{ .bgImage | absURL }}');">
+<section id="contact-us" {{ if .overlay }} class="overlay" {{ end }}>
+<img class="img-responsive" src="{{ .bgImage | absURL }}">
   <div class="container" >
 		<div class="row">
 			<div class="col-md-12" >
@@ -24,6 +25,7 @@
 			</div><!-- .col-md-12 close -->
 		</div><!-- .row close -->
 	</div><!-- .container close -->
+</picture>
 </section><!-- #contact-us close -->
 {{end}}
 {{end}}
